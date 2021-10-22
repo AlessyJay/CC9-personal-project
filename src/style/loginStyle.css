@@ -1,0 +1,119 @@
+/* Global */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&display=swap");
+
+body,
+html {
+  font-family: "Encode Sans SC", sans-serif;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+.register {
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  color: black;
+}
+button {
+  font-family: "Encode Sans SC", sans-serif;
+  font-weight: bolder;
+}
+
+/* Contents */
+.background {
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?cs=srgb&dl=pexels-michael-block-3225517.jpg&fm=jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background h1 {
+  text-align: center;
+  font-size: 64px;
+  font-weight: bolder;
+}
+.loginForm {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: white;
+  padding: 2%;
+  align-items: center;
+  border-radius: 12px;
+  width: 70%;
+  margin-left: 13%;
+}
+.loginForm h2 {
+  text-align: center;
+  font-size: 42px;
+}
+.loginForm input {
+  height: 3rem;
+  width: 80%;
+  font-size: 24px;
+  border: 2px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  padding: 0.4rem;
+  margin: 2%;
+}
+.loginForm button {
+  width: 50%;
+  height: 7vh;
+  font-size: 34px;
+  cursor: pointer;
+  background: lightgreen;
+  border: none;
+  border-radius: 50px;
+  transition: 200ms;
+}
+.loginForm button:hover {
+  background: green;
+}
+.loginForm p {
+  font-size: 24px;
+  font-weight: bolder;
+}
+.homeBtn {
+  width: 20%;
+  height: 5vh;
+  font-size: 34px;
+  cursor: pointer;
+  background: rgb(206, 157, 42);
+  border: none;
+  border-radius: 50px;
+  transition: 200ms;
+  margin-top: 2vh;
+  margin-left: 40%;
+}
+
+/* Register */
+.register {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: auto;
+  justify-content: space-between;
+}
+.registerInput {
+  display: flex;
+  justify-content: end;
+}
+
+/* Forget password */
+.forgetPassword {
+  background-image: url("https://images.pexels.com/photos/1099217/pexels-photo-1099217.jpeg?cs=srgb&dl=pexels-mirco-hunziker-1099217.jpg&fm=jpg");
+  height: 100vh;
+  background-position: center;
+  background: cover no-repeat;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Global */
+      @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&display=swap");
+
+      body,
+      html {
+        font-family: "Encode Sans SC", sans-serif;
+        padding: 0;
+        margin: 0;
+        scroll-behavior: smooth;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+      }
+      a {
+        text-decoration: none;
+        padding: 0px;
+        margin: 0px;
+        color: black;
+        width: 30%;
+      }
+      button {
+        font-family: "Encode Sans SC", sans-serif;
+        font-weight: bolder;
+      }
+
+      /* Contents */
+      h1 {
+        font-size: 78px;
+        text-align: center;
+      }
+      .btn {
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+      }
+      .btn button {
+        width: 100%;
+        height: fit-content;
+        font-size: 48px;
+        padding: 1rem;
+        border: none;
+        margin: 1rem;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: 400ms;
+      }
+      .btn button:hover {
+        background: limegreen;
+      }
+    </style>
+    <title>Admin</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>GREENT</h1>
+      <div class="btn">
+        <a href="./adminProduct.html"><button>Product</button></a>
+        <a href=""><button>Customer</button></a>
+        <a href="./index.html"><button>Home</button></a>
+      </div>
+    </div>
+  </body>
+</html>

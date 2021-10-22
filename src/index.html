@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Nav -->
+    <div class="bg1Section">
+      <div class="background1" id="bg1">
+        <div class="container">
+          <nav class="navBar">
+            <h1>GREENT</h1>
+            <div class="menu">
+              <h3 class="btn btn-home">Home</h3>
+              <h3 class="btn btn-shop"><a href="#shop">Shop</a></h3>
+              <h3 class="btn btn-contact">
+                <a href="#contactUs">Contact us</a>
+              </h3>
+              <h3 class="btn btn-login"><a href="./login.html">Login</a></h3>
+            </div>
+          </nav>
+
+          <!-- Contents -->
+          <div class="content-h1" id="bg1-content">
+            <p>CONNECTING YOUR JOURNEY WITH PURPOSE</p>
+            <h1>
+              Unforgettable travel <br />experiences with <br />a positive
+              impact
+            </h1>
+            <button><a href="#bg2">Explore</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contents page 2 w/background -->
+    <div class="bg2Section">
+      <div class="bg2Section">
+        <div class="background2" id="bg2">
+          <div class="container">
+            <h1>Why GREENT?</h1>
+            <div class="detailPage2" id="detailBg2">
+              <p id="detail">
+                <span style="color: green">GREENT</span> Travel is a
+                forward-thinking travel company headquartered in London born out
+                of a passion to do things differently.<br /><br />
+
+                In Swahili, a Bantu language spoken by millions in Eastern,
+                Central and Southern Africa, the name Niara means "with utmost
+                purpose" <br /><br />and our team are united by a passion for
+                exploration and a belief that the right kind of travel can make
+                the world a better place.<br /><br />
+
+                Our Travel Researchers are here to create incredible trips with
+                a positive impact for you.
+              </p>
+              <div class="column">
+                <div class="more">
+                  <img
+                    src="https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?cs=srgb&dl=pexels-andre-furtado-1264210.jpg&fm=jpg"
+                    alt="Camera"
+                  />
+                  <h2 style="display: flex">
+                    Unforgettable experiences<br /><br />
+                    Creating your trip is entirely collaborative and our Travel
+                    Researchers are here for every step.
+                  </h2>
+                </div>
+                <div class="more2">
+                  <img
+                    src="https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?cs=srgb&dl=pexels-element-digital-1051075.jpg&fm=jpg"
+                    alt="Camera"
+                  />
+                  <h2>
+                    Positive impact<br /><br />
+                    Curated sustainable experiences and accommodation that
+                    maximize the benefits to local people and place.
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contents page 3 w/background -->
+    <div class="background3" id="shop" onmouseover="activate()">
+      <div class="container">
+        <div class="cart">
+          <a href="./cart.html"
+            ><img
+              src="https://image.flaticon.com/icons/png/512/2169/2169831.png"
+              alt=""
+          /></a>
+        </div>
+        <div class="search">
+          <div class="currency">
+            <select name="" id="cash" onclick="cur()">
+              <option value="GBP">£ GBP</option>
+              <option value="USD">$ USD</option>
+              <option value="EUR">€ EUR</option>
+              <option value="AUD">$ AUD</option>
+              <option value="CAD">$ CAD</option>
+            </select>
+          </div>
+          <h1>Search:</h1>
+          <input type="search" class="lineSearch" placeholder="Search" />
+        </div>
+        <hr style="color: black; border: 2px solid black; margin-top: 1%" />
+
+        <div class="beforeCards" id="beforeCards">
+          <h1>
+            Get inspired<br />
+            Look through our programme to get inspired!
+          </h1>
+        </div>
+        <div class="cards" id="allCards">
+          <!-- Africa -->
+          <div class="cardAfrica" id="Africa">
+            <h2 style="text-align: center; font-weight: 700; font-size: 38px">
+              Africa
+            </h2>
+            <img src="./imgs/africa.jpeg" alt="Africa" />
+            <hr style="color: black; width: 80%" />
+            <p>
+              The greatest wildlife spectacle on earth<br /><br />
+              Africa is the world’s premier wildlife watching destination.<br /><br />
+              From coming face to face with a troop of gorillas in the jungle
+              and feeling a million wildebeest hooves thunder across the
+              Serengeti on their migration,<br /><br />
+              to following big cats on the prowl through the bush and
+              breathtaking encounters elephants on foot, there is nowhere like
+              it.
+            </p>
+            <hr style="color: black; width: 80%" />
+            <!-- <button class='detailBtn'>More detail</button> -->
+            <div class="buyAdd">
+              <button class="detailBtn">More detail</button>
+              <hr style="color: black" />
+              <button>Buy</button>
+              <button>Cart</button>
+            </div>
+            <hr style="color: black; width: 80%" />
+            <div class="price">
+              <h1>From: <span id="priceAfrica">£4,196</span></h1>
+            </div>
+          </div>
+
+          <!-- Europe -->
+          <div class="cardEurope" id="Europe">
+            <h2
+              style="
+                text-align: center;
+                font-weight: 700;
+                font-size: 38px;
+                color: white;
+              "
+            >
+              Europe
+            </h2>
+            <img src="./imgs/europe.jpeg" alt="Europe" />
+            <hr style="color: black; width: 80%" />
+            <p>
+              Luxury nature travel and safaris<br /><br />
+              Europe may not be the first continent that springs to mind when
+              looking for a luxury nature-based holiday,<br /><br />
+              yet there are areas of true wilderness to be found close to its
+              historic cities, and regions where nature is being encouraged to
+              flourish once more.
+            </p>
+            <hr style="color: black; width: 80%" />
+            <!-- <button class='detailBtn'>More detail</button> -->
+            <div class="buyAdd">
+              <button class="detailBtn">More detail</button>
+              <hr style="color: black" />
+              <button>Buy</button>
+              <button>Cart</button>
+            </div>
+            <hr style="color: black; width: 80%" />
+            <div class="price">
+              <h1>From: <span id="priceEurope">£3,916</span></h1>
+            </div>
+          </div>
+
+          <!-- Asia -->
+          <div class="cardAsia" id="Asia">
+            <h2
+              style="
+                text-align: center;
+                font-weight: 700;
+                font-size: 38px;
+                color: black;
+              "
+            >
+              Asia
+            </h2>
+            <img src="./imgs/asia.jpeg" alt="Africa" />
+            <hr style="color: black; width: 80%" />
+            <p>
+              Ancient cultures and vital wilderness<br /><br />
+              Whether you're hiking on the Roof of World in the Himalayas,
+              tracking tigers in the jungle,<br /><br />
+              island hopping by sailing yacht or diving with whale sharks,
+              Asia’s wild places are as epic as they are varied.
+            </p>
+            <hr style="color: black; width: 80%" />
+            <!-- <button class='detailBtn'>More detail</button> -->
+            <div class="buyAdd">
+              <button class="detailBtn">More detail</button>
+              <hr style="color: black" />
+              <button>Buy</button>
+              <button>Cart</button>
+            </div>
+            <hr style="color: black; width: 80%" />
+            <div class="price">
+              <h1>From: <span id="priceAsia">£3,182</span></h1>
+            </div>
+          </div>
+
+          <!-- Australia -->
+          <div class="cardAustralia" id="Australia">
+            <h2
+              style="
+                text-align: center;
+                font-weight: 700;
+                font-size: 38px;
+                color: white;
+              "
+            >
+              Australia
+            </h2>
+            <img src="./imgs/australia.jpeg" alt="Austraia" />
+            <hr style="color: black; width: 80%" />
+            <p>
+              Unique wildlife and unlimited adventure<br /><br />
+              New Zealand, Australia and a sprinkling of Polynesian islands in
+              the Pacific between them are incredible settings for an
+              adventure.<br /><br />
+              Outback deserts, rainbow coral playgrounds, alpine mountains, and
+              green forests home to some of the world’s most unusual wildlife
+              –there are countless stretches of beautiful wilderness to explore.
+            </p>
+            <hr style="color: black; width: 80%" />
+            <!-- <button class='detailBtn'>More detail</button> -->
+            <div class="buyAdd">
+              <button class="detailBtn">More detail</button>
+              <hr style="color: black" />
+              <button>Buy</button>
+              <button>Cart</button>
+            </div>
+            <hr style="color: black; width: 80%" />
+            <div class="price">
+              <h1>From: <span id="priceAustralia">£10,472</span></h1>
+            </div>
+          </div>
+
+          <!-- Latin America -->
+          <div class="cardLatinAmerica" id="Latin">
+            <h2
+              style="
+                text-align: center;
+                font-weight: 700;
+                font-size: 38px;
+                color: white;
+              "
+            >
+              Latin America
+            </h2>
+            <img src="./imgs/latin.jpeg" alt="Latin America" />
+            <hr style="color: black; width: 80%" />
+            <p>
+              Diverse landscapes, cultures and wildlife<br /><br />
+              From great rainforests and wetlands bursting with life to
+              snowcapped Patagonian mountains and red deserts, all skirted by
+              the rich waters of the Atlantic and Pacific Oceans, Latin America
+              is a stunningly diverse continent.<br /><br />
+              Its cultures too are colourful and varied with a beautiful blend
+              of indigenous, European and African influences to experience.
+              Climb ancient wonders and wander colonial-era plazas before
+              indulging in buzzing creative and culinary scenes.
+            </p>
+            <hr style="color: black; width: 80%" />
+            <!-- <button class='detailBtn'>More detail</button> -->
+            <div class="buyAdd">
+              <button class="detailBtn">More detail</button>
+              <hr style="color: black" />
+              <button>Buy</button>
+              <button>Cart</button>
+            </div>
+            <hr style="color: black; width: 80%" />
+            <div class="price">
+              <h1>From: <span id="priceLatinAmerica">£3,515</span></h1>
+            </div>
+          </div>
+
+          <!-- America -->
+          <div class="cardAmerica" id="America">
+            <h2
+              style="
+                text-align: center;
+                font-weight: 700;
+                font-size: 38px;
+                color: white;
+              "
+            >
+              America
+            </h2>
+            <img src="./imgs/america.jpeg" alt="America" />
+            <hr style="color: black; width: 80%" />
+            <p>
+              Diverse landscapes, cultures and wildlife<br /><br />
+              From great rainforests and wetlands bursting with life to
+              snowcapped Patagonian mountains and red deserts, all skirted by
+              the rich waters of the Atlantic and Pacific Oceans, Latin America
+              is a stunningly diverse continent.<br /><br />
+              Its cultures too are colourful and varied with a beautiful blend
+              of indigenous, European and African influences to experience.
+              Climb ancient wonders and wander colonial-era plazas before
+              indulging in buzzing creative and culinary scenes.
+            </p>
+            <hr style="color: black; width: 80%" />
+            <!-- <button class='detailBtn'>More detail</button> -->
+            <div class="buyAdd">
+              <button class="detailBtn">More detail</button>
+              <hr style="color: black" />
+              <button>Buy</button>
+              <button>Cart</button>
+            </div>
+            <hr style="color: black; width: 80%" />
+            <div class="price">
+              <h1>From: <span id="priceAmerica">£6,787</span></h1>
+            </div>
+          </div>
+          <div class="private">
+            <h3>Want to book a private trip with us?</h3>
+            <a href="./private.html"><button>Book your private trip</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact us starts here -->
+    <div class="background4" id="contactUs">
+      <div class="container">
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+          imperdiet, quam sed suscipit laoreet, orci nisl hendrerit nisi,<br /><br />
+          ut efficitur sapien neque a sapien. Nullam in sagittis sapien, ut
+          pharetra arcu. Mauris vitae nisi vitae ex posuere ultrices a congue
+          ipsum.<br /><br />
+          Phasellus ipsum ipsum, faucibus eu accumsan sed, dictum vel metus.
+          Etiam quis arcu justo. In quis urna dolor.<br /><br />
+          Nullam quis accumsan lacus, eu sagittis ante. Sed consequat porttitor
+          metus, id sagittis eros sodales id.<br /><br />
+
+          example@gmail.com<br /><br />
+
+          Or<br /><br />
+
+          Tel: +44 123 456 789<br /><br />
+
+          @Baker Street 56, London.
+        </h3>
+
+        <hr style="color: white; font-weight: 700; margin-top: 5%" />
+        <form>
+          <h1>Write me directly</h1>
+          <div class="name">
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Lastname" />
+          </div>
+          <div class="userContact">
+            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Phone" />
+          </div>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            style="resize: none"
+            placeholder="Tell us more"
+          ></textarea>
+          <button>Submit</button>
+        </form>
+      </div>
+      <footer>
+        <div class="container">
+          <hr style="color: white; font-weight: 700; margin-top: 5%" />
+
+          <div class="footerDetail">
+            <div class="company">
+              <h4>Company</h4>
+              <a href=""><p>Terms & Conditions</p></a>
+              <a href=""><p>Privacy Policy</p></a>
+              <a href=""><p>FDA Disclaimer</p></a>
+            </div>
+            <div class="support">
+              <h4>Support</h4>
+              <p><a href="">Cancel & refunds</a></p>
+            </div>
+            <div class="social">
+              <h4>Social</h4>
+              <div class="socialImg">
+                <div class="fb">
+                  <img
+                    src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512"
+                    alt="FB"
+                  />
+                  <p>
+                    <a href="https://www.facebook.com/" target="blank"
+                      >Facebook</a
+                    >
+                  </p>
+                </div>
+                <div class="ig">
+                  <img
+                    src="https://icons-for-free.com/download-icon-colored+gradient+instagram+media+social+social+media+icon-1320192520147384507_512.png"
+                    alt="IG"
+                  />
+                  <p>
+                    <a href="https://www.instagram.com/" target="blank"
+                      >Instragram</a
+                    >
+                  </p>
+                </div>
+                <div class="tw">
+                  <img
+                    src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png"
+                    alt="TW"
+                  />
+                  <p>
+                    <a href="https://twitter.com/" target="blank">Twitter</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./JS/main.js"></script>
+  </body>
+</html>

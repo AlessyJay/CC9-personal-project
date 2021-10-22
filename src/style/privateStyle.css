@@ -1,0 +1,152 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&display=swap');
+
+body, html{
+    font-family: 'Encode Sans SC', sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+}
+button{
+    font-family: 'Encode Sans SC', sans-serif;
+    font-weight: bolder;
+}
+h1,h2,p{
+    font-weight: bolder;
+}
+select, input{
+    font-family: 'Encode Sans SC', sans-serif;
+}
+
+/* Contents */
+.background{
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/917494/pexels-photo-917494.jpeg?cs=srgb&dl=pexels-efdal-yildiz-917494.jpg&fm=jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.background .header{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    margin-top: 0.3%;
+    font-size: 54px;
+    /* text-shadow: 5px 10px 15px; */
+}
+.background .destination{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    align-items: center;
+}
+.background .destination h2{
+    font-size: 54px;
+}
+.background .destination select{
+    width: 80%;
+    border: 5px solid black;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    outline: none;
+    font-size: 34px;
+    background: transparent;
+    color: black;
+    font-weight: bolder;
+    text-align-last:center;
+}
+.background .destination select option{
+    text-align: center;
+    color: black;
+}
+.background .person{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.background .person h2{
+    font-size: 34px;
+    color: white;
+}
+.background .person input{
+    width: 40%;
+    border: 5px solid black;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    outline: 0;
+    font-size: 24px;
+    background: transparent;
+    text-align: center;
+    color: white;
+}
+.background .date{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex:auto;
+}
+.background .selectDate{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+.date h1{
+    font-size: 34px;
+    color: black;
+}
+.background .selectDate p{
+    font-size: 24px;
+    margin: 0 2% 0 2%;
+    width: 100%;
+    font-weight: bolder;
+    color: white;
+}
+.selectDate input{
+    width: 100%;
+    font-size: 24px;
+    border: 5px solid black;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    background: transparent;
+    outline: none;
+    color: white;
+    font-weight: bolder;
+}
+.background .btn{
+    display: flex;
+    justify-content: space-evenly;
+}
+.background .book, .home{
+    width: 20%;
+    height: 3rem;
+    font-size: 34px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    margin-top: 3%;
+    cursor: pointer;
+    transition: 400ms;
+}
+.background .book:hover{
+    background: green;
+    color: white;
+}
+.background .home:hover{
+    background: gold;
+}

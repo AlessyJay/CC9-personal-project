@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&display=swap');
+
+        body, html{
+            font-family: 'Encode Sans SC', sans-serif;
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+        .container{
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        a{
+            text-decoration: none;
+            padding: 0px;
+            margin: 0px;
+            color: black;
+        }
+        button{
+            font-family: 'Encode Sans SC', sans-serif;
+            font-weight: bolder;
+        }
+
+        /* Contents */
+        .text{
+            display: flex;
+            flex: auto;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            font-size: 34px;
+            font-weight: bolder;
+        }
+        .btn{
+            display: flex;
+            flex: auto;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+        }
+        .btn button,a{
+            width: 30%;
+            height: 5rem;
+            justify-content: center;
+            font-size: 42px;
+            border: none;
+            border-radius: 50px;
+            background: lightgreen;
+            transition: 400ms;
+            cursor: pointer;
+        }
+        .btn button{
+            width: 100%;
+        }
+        .btn button:hover,a:hover{
+            transform: scale(1.2);
+            background: limegreen;
+        }
+    </style>
+    <title>Success</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <p>Your booking is now succeeded,<br>
+            <span style='font-size: 150px;'>Thank you</span></p>
+        </div>
+        <div class="btn">
+            <a href="./index.html"><button>Home</button></a>
+        </div>
+    </div>
+</body>
+</html>

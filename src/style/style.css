@@ -1,0 +1,769 @@
+/* Global */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&display=swap");
+
+body,
+html {
+  font-family: "Encode Sans SC", sans-serif;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+button {
+  font-family: "Encode Sans SC", sans-serif;
+  font-weight: bolder;
+}
+.noStyle {
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Nav */
+.navBar {
+  display: flex;
+  flex: auto;
+}
+.navBar h1 {
+  font-size: 64px;
+  margin-left: 5%;
+  color: white;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex: auto;
+}
+.menu .btn {
+  margin: 3%;
+  padding: 2%;
+  font-size: 24px;
+  transition: 400ms;
+  cursor: pointer;
+  color: white;
+  position: relative;
+}
+.menu .btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  background: white;
+  left: 0;
+  bottom: 0;
+}
+
+.menu .btn-home::after,
+.btn-shop::after,
+.btn-contact::after,
+.btn-login::after {
+  transform: scale(0, 1);
+  transform-origin: 0% 100%;
+  transition: transform 0.3s ease;
+}
+
+.menu .btn-home:hover::after,
+.btn-shop:hover::after,
+.btn-contact:hover::after,
+.btn-login:hover::after {
+  transform: scale(1, 1);
+}
+
+/* Contents front page (home) */
+.bg1Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.background1 {
+  height: 100vh;
+  /* background-image: url("https://images.pexels.com/photos/1402850/pexels-photo-1402850.jpeg?cs=srgb&dl=pexels-s-migaj-1402850.jpg&fm=jpg"); */
+  background-image: url(../imgs/main.jpeg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.content-h1 {
+  z-index: 2;
+}
+.content-h1 h1 {
+  font-size: 84px;
+  text-align: center;
+  margin-top: 1%;
+  color: white;
+  font-weight: bolder;
+}
+.content-h1 button {
+  font-family: "Encode Sans SC", sans-serif;
+  width: 15%;
+  height: 7vh;
+  margin-left: 42%;
+
+  border: 7px double lightgreen;
+  border-radius: 20px;
+  background: none;
+  font-size: 34px;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+.content-h1 button:hover {
+  background: lightgreen;
+  color: black;
+}
+.content-h1 p {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-top: 2%;
+  font-weight: bolder;
+}
+
+/* Content front page 2 */
+.bg2Section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+.background2 {
+  /* background-image: url("https://images.pexels.com/photos/2741648/pexels-photo-2741648.jpeg?cs=srgb&dl=pexels-robert-forever-ago-2741648.jpg&fm=jpg"); */
+  background-image: url(../imgs/detailBg.jpeg);
+  height: 100vh;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 4;
+}
+.background2 h1 {
+  font-size: 34px;
+  text-align: center;
+  margin-top: 7%;
+  font-weight: bolder;
+  color: white;
+}
+.detailPage2 {
+  margin-left: 5%;
+  display: flex;
+  flex: auto;
+  height: 80vh;
+}
+.detailPage2 p {
+  font-size: 22px;
+  font-weight: bolder;
+  width: 30%;
+
+  background: white;
+  padding: 2%;
+  border-radius: 10px;
+  box-shadow: 5px 10px 20px;
+  text-align: center;
+}
+.detailPage2 img {
+  width: 200px;
+  height: 200px;
+  border: 10px white double;
+  margin: 10vh;
+  border-radius: 50%;
+}
+.detailPage2 h2 {
+  margin-top: 8%;
+  width: 60%;
+  color: white;
+  font-weight: bolder;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.more {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  height: 35vh;
+}
+.more2 {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+}
+
+/* Contents page 3 */
+.background3 {
+  height: 100%;
+  background: white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cart img {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2vh;
+}
+.search .currency {
+  margin-right: 5vh;
+}
+.search select {
+  border: none;
+  font-size: 24px;
+  transition: 400ms;
+  outline: none;
+  background: transparent;
+}
+.search .lineSearch {
+  font-family: "Encode Sans SC", sans-serif;
+  font-weight: bolder;
+  height: 5vh;
+  border: 3px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 20px;
+  outline: none;
+}
+.search h1 {
+  margin-right: 0.3rem;
+}
+.private {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  align-items: center;
+  margin-bottom: 4%;
+}
+.private h3 {
+  font-size: 24px;
+}
+.private button {
+  width: 20rem;
+  height: 5rem;
+  border-radius: 50px;
+  border: none;
+  background-color: lightgreen;
+  font-size: 24px;
+  transition: 400ms;
+  cursor: pointer;
+}
+.private button:hover {
+  background-color: green;
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Cards start here */
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.beforeCards h1 {
+  font-size: 34px;
+  text-align: center;
+  margin-top: 8vh;
+  font-weight: bolder;
+  text-shadow: 5px 10px 20px;
+}
+
+/* Cards background start */
+.cards .card {
+  /* background: url("https://images.pexels.com/photos/5487407/pexels-photo-5487407.jpeg?cs=srgb&dl=pexels-jurie-maree-5487407.jpg&fm=jpg"); */
+  background: url(../imgs/africa.jpeg);
+  background-repeat: no-repeat;
+  box-shadow: 5px 10px 20px;
+  border: 5px gray none;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 19.6%;
+  margin: 5%;
+  transition: 400ms;
+}
+/* .cards .cardEurope {
+  background: url("https://images.pexels.com/photos/3879160/pexels-photo-3879160.jpeg?cs=srgb&dl=pexels-alex-azabache-3879160.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  box-shadow: 5px 10px 20px;
+  border: 5px gray none;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 19.6%;
+  margin: 5%;
+  transition: 400ms;
+}
+.cards .cardAsia {
+  background: url("https://images.pexels.com/photos/2187604/pexels-photo-2187604.jpeg?cs=srgb&dl=pexels-evgeny-tchebotarev-2187604.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  box-shadow: 5px 10px 20px;
+  border: 5px gray none;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 19.6%;
+  margin: 5%;
+  transition: 400ms;
+}
+.cards .cardAustralia {
+  background: url("https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?cs=srgb&dl=pexels-rijan-hamidovic-2193300.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  box-shadow: 5px 10px 20px;
+  border: 5px gray none;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 19.6%;
+  margin: 5%;
+  transition: 400ms;
+}
+.cards .cardLatinAmerica {
+  background: url("https://images.pexels.com/photos/8639333/pexels-photo-8639333.jpeg?cs=srgb&dl=pexels-rodnae-productions-8639333.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  box-shadow: 5px 10px 20px;
+  border: 5px gray none;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 19.6%;
+  margin: 5%;
+  transition: 400ms;
+}
+.cards .cardAmerica {
+  background: url("https://images.pexels.com/photos/1202723/pexels-photo-1202723.jpeg?cs=srgb&dl=pexels-sharefaith-1202723.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  box-shadow: 5px 10px 20px;
+  border: 5px gray none;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 19.6%;
+  margin: 5%;
+  transition: 400ms;
+} */
+.cards .card:hover
+/* .cardEurope:hover,
+.cardAsia:hover,
+.cardAustralia:hover,
+.cardLatinAmerica:hover,  */
+ /*.cardAmerica:hover*/ {
+  transform: scale(1.1);
+}
+/* Cards background end */
+
+.cards .card img
+/*.cardEurope img,
+.cardAsia img,
+.cardAustralia img,
+.cardLatinAmerica img,
+.cardAmerica img */ {
+  width: 100%;
+  border-radius: 12px;
+}
+.cards .card p
+/*.cardEurope p,
+.cardAsia p,
+.cardAustralia p,
+.cardLatinAmerica p,
+.cardAmerica p*/ {
+  width: fit-content;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 5px 10px 15px black;
+  text-align: center;
+}
+.cards .card button
+/*.cardEurope button,
+.cardAsia button,
+.cardAustralia button,
+.cardLatinAmerica button,
+.cardAmerica button*/ {
+  border-radius: 50px;
+  color: white;
+  margin-left: 1%;
+  border: 1px white solid;
+  font-size: 20px;
+  padding: 2%;
+  background: transparent;
+  transition: 400ms;
+  cursor: pointer;
+}
+.cards .card button:hover
+/*.cardEurope button:hover,
+.cardAsia button:hover,
+.cardAustralia button:hover,
+.cardLatinAmerica button:hover,
+.cardAmerica button:hover*/ {
+  background: white;
+  color: black;
+}
+.cards .card .buyAdd
+/*.cardEurope .buyAdd,
+.cardAsia .buyAdd,
+.cardAustralia .buyAdd,
+.cardLatinAmerica .buyAdd,
+.cardAmerica .buyAdd*/ {
+  display: flex;
+  flex-direction: row;
+  margin-right: 2rem;
+  flex: auto;
+  justify-content: flex-end;
+}
+.cards .card .buyAdd .detailBtn
+/*.cardEurope .buyAdd .detailBtn,
+.cardAsia .buyAdd .detailBtn,
+.cardAustralia .buyAdd .detailBtn,
+.cardLatinAmerica .buyAdd .detailBtn,
+.cardAmerica .buyAdd .detailBtn*/ {
+  margin-right: 0.2rem;
+}
+.price {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4rem;
+  color: white;
+}
+
+/* Contact us starts here */
+.background4 {
+  height: 230vh;
+  background: url("https://images.pexels.com/photos/4791620/pexels-photo-4791620.jpeg?cs=srgb&dl=pexels-gantas-vai%C4%8Diul%C4%97nas-4791620.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  position: relative;
+  z-index: 3;
+}
+.background4 h3 {
+  font-size: 34px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  text-shadow: 5px 10px 15px black;
+  margin-top: 12%;
+}
+
+/* Footer */
+.footerDetail {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  margin-top: 2%;
+}
+.company,
+.support,
+.social {
+  width: 20%;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  align-items: center;
+}
+.socialImg img {
+  width: 50px;
+  height: 50px;
+  margin-right: 5%;
+}
+
+.fb,
+.ig,
+.tw {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  align-items: center;
+}
+
+.company h4,
+.support h4,
+.social h4 {
+  color: white;
+  margin-top: 3%;
+  font-size: 34px;
+}
+
+.company p,
+.support p,
+.social p {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.background4 form {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  align-items: center;
+}
+.background4 form h1 {
+  color: white;
+  text-shadow: 5px 10px 15px black;
+}
+.background4 .name,
+.userContact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 80%;
+  overflow: hidden;
+}
+.background4 .name input,
+.userContact input {
+  width: 40%;
+  margin: 0.6rem 0 0.6rem 0;
+  font-size: 24px;
+  padding: 0.5rem;
+  color: white;
+  background: transparent;
+  border: 3px solid white;
+  outline: none;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.background4 form textarea {
+  width: 80%;
+  font-size: 24px;
+  padding: 0.5%;
+  margin-top: 1%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+.background4 form button {
+  width: 20%;
+  margin: 3% 0 0 0;
+  height: 3rem;
+  font-size: 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: lightgreen;
+}
+
+/* Admin */
+.align-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 67vh;
+}
+.add {
+  width: 20rem;
+  height: 10vh;
+  font-size: 1.7rem;
+
+  border-radius: 10px;
+  border: double green 7px;
+  outline: none;
+  background: none;
+
+  cursor: pointer;
+  transition: 400ms;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.add:hover {
+  background: green;
+  transform: scale(1.2);
+  border: none;
+}
+.backHome {
+  width: 20rem;
+  height: 10vh;
+  font-size: 1.7rem;
+
+  border-radius: 10px;
+  border: double darkgoldenrod 7px;
+  outline: none;
+  background: none;
+
+  cursor: pointer;
+  transition: 400ms;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.backHome:hover {
+  background: gold;
+  transform: scale(1.2);
+  border: none;
+}
+
+/* Edit btn */
+.red {
+  border: none;
+  background: rgb(255, 0, 0);
+  border-radius: 15px;
+  width: 15%;
+  height: 3em;
+  font-size: 24px;
+  cursor: pointer;
+}
+.blue {
+  border: none;
+  background: rgb(0, 191, 255);
+  border-radius: 15px;
+  width: 15%;
+  height: 3em;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* add form */
+.formControl {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.insert {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 24px;
+  border: solid black;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding: 3%;
+  outline: 0;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  flex: auto;
+}
+.right input {
+  width: 95%;
+}
+.des {
+  display: flex;
+}
+.des textarea {
+  font-family: "Encode Sans SC", sans-serif;
+  resize: none;
+  font-size: 24px;
+  font-weight: bolder;
+  height: 8rem;
+  border: double 5px black;
+}
+.createBtn {
+  width: 30%;
+  height: 5rem;
+  font-size: 24px;
+  font-weight: bolder;
+  border-radius: 10px;
+  border: double 10px green;
+  background: 0;
+  margin-top: 15%;
+  margin-left: 34.5%;
+  margin-bottom: 7%;
+  transition: 400ms;
+}
+.createBtn:hover {
+  background: green;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* User profile */
+.userList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userImage {
+  border-radius: 50%;
+  width: 20%;
+  height: 19.7em;
+  margin-top: 2%;
+  border: double 15px black;
+}
+.inputText {
+  font-family: "Encode Sans SC", sans-serif;
+  width: 35%;
+  font-size: 27px;
+  padding: 0.7%;
+  text-align: center;
+  border: solid 3px black;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: 0;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.labelName {
+  margin-top: 5%;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+/* Customer lists */
+.List {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: red;
+  border-radius: 15px;
+  margin-top: 2%;
+}
+.imageUser {
+  border-radius: 50%;
+  width: 10%;
+  height: 10em;
+  margin-top: 2%;
+  border: double 5px black;
+  margin: 2%;
+}
+.userDetail {
+  display: flex;
+  justify-content: space-around;
+  flex: auto;
+  flex-wrap: wrap;
+}
+.buyMethod {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.secondLine {
+  display: flex;
+  flex-wrap: wrap;
+}

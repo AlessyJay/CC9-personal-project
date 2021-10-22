@@ -1,0 +1,87 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&display=swap');
+
+body, html{
+    font-family: 'Encode Sans SC', sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+}
+button{
+    font-family: 'Encode Sans SC', sans-serif;
+    font-weight: bolder;
+}
+img{
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+/* Contents */
+.background h1{
+    font-size: 78px;
+    text-align: center;
+    margin-top: 3%;
+    font-weight: bolder;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}
+form input{
+    width: 70%;
+    padding: 0.6rem;
+    margin: 3%;
+    font-size: 24px;
+    margin-top: 6%;
+    border: 3px solid black;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    outline: none;
+}
+form .name,
+.contact{
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    width: 80%;
+}
+form .travelName{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+}
+.travelName input{
+    text-align: center;
+}
+.background h2{
+    font-size: 34px;
+    font-weight: bolder;
+}
+.paymentOptions{
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.paymentOptions img{
+    cursor: pointer;
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Global */
+        @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&display=swap');
+
+        body, html{
+            font-family: 'Encode Sans SC', sans-serif;
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+        .container{
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        a{
+            text-decoration: none;
+            padding: 0px;
+            margin: 0px;
+            color: black;
+            width: 30%;
+        }
+        button{
+            font-family: 'Encode Sans SC', sans-serif;
+            font-weight: bolder;
+        }
+
+        /* Contents */
+        h1{
+            font-size: 78px;
+            text-align: center;
+        }
+        .btn{
+            display: flex;
+            flex: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+        .btn button{
+            width: 100%;
+            height: fit-content;
+            font-size: 48px;
+            padding: 1rem;
+            border: none;
+            margin: 1rem;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 400ms;
+        }
+        .btn button:hover{
+            background: limegreen;
+        }
+        p{
+            text-align: center;
+            font-size: 34px;
+            font-weight: bolder;
+        }
+        .Add{
+            display: flex;
+            flex: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5%;
+            font-size: 34px;
+        }
+        .Add .addBtn{
+            width: 25%;
+            height: fit-content;
+            font-size: 48px;
+            font-weight: bolder;
+            border: none;
+            background: limegreen;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Cards */
+        .cards{
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+        .beforeCards h1{
+            font-size: 34px;
+            text-align: center;
+            margin-top: 8vh;
+            font-weight: bolder;
+            text-shadow: 5px 10px 20px;
+        }
+
+        /* Cards background start */
+        .cards .cardAfrica{
+            background: url('https://images.pexels.com/photos/5487407/pexels-photo-5487407.jpeg?cs=srgb&dl=pexels-jurie-maree-5487407.jpg&fm=jpg');
+            background-repeat: no-repeat;
+            box-shadow: 5px 10px 20px;
+            border: 5px gray none;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 19.6%;
+            margin: 5%;
+            transition: 400ms;
+        }
+        .cards .cardEurope{
+            background: url('https://images.pexels.com/photos/3879160/pexels-photo-3879160.jpeg?cs=srgb&dl=pexels-alex-azabache-3879160.jpg&fm=jpg');
+            background-repeat: no-repeat;
+            box-shadow: 5px 10px 20px;
+            border: 5px gray none;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 19.6%;
+            margin: 5%;
+            transition: 400ms;
+        }
+        .cards .cardAsia{
+            background: url('https://images.pexels.com/photos/2187604/pexels-photo-2187604.jpeg?cs=srgb&dl=pexels-evgeny-tchebotarev-2187604.jpg&fm=jpg');
+            background-repeat: no-repeat;
+            box-shadow: 5px 10px 20px;
+            border: 5px gray none;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 19.6%;
+            margin: 5%;
+            transition: 400ms;
+        }
+        .cards .cardAustralia{
+            background: url('https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?cs=srgb&dl=pexels-rijan-hamidovic-2193300.jpg&fm=jpg');
+            background-repeat: no-repeat;
+            box-shadow: 5px 10px 20px;
+            border: 5px gray none;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 19.6%;
+            margin: 5%;
+            transition: 400ms;
+        }
+        .cards .cardLatinAmerica{
+            background: url('https://images.pexels.com/photos/8639333/pexels-photo-8639333.jpeg?cs=srgb&dl=pexels-rodnae-productions-8639333.jpg&fm=jpg');
+            background-repeat: no-repeat;
+            box-shadow: 5px 10px 20px;
+            border: 5px gray none;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 19.6%;
+            margin: 5%;
+            transition: 400ms;
+        }
+        .cards .cardAmerica{
+            background: url('https://images.pexels.com/photos/1202723/pexels-photo-1202723.jpeg?cs=srgb&dl=pexels-sharefaith-1202723.jpg&fm=jpg');
+            background-repeat: no-repeat;
+            box-shadow: 5px 10px 20px;
+            border: 5px gray none;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 19.6%;
+            margin: 5%;
+            transition: 400ms;
+        }
+        .cards .cardAfrica:hover,
+        .cardEurope:hover,
+        .cardAsia:hover,
+        .cardAustralia:hover,
+        .cardLatinAmerica:hover,
+        .cardAmerica:hover{
+            transform: scale(1.1);
+        }
+        /* Cards background end */
+
+        .cards .cardAfrica img, 
+        .cardEurope img, 
+        .cardAsia img, 
+        .cardAustralia img,
+        .cardLatinAmerica img,
+        .cardAmerica img{
+            width: 100%;
+            border-radius: 12px;
+        }
+        .cards .cardAfrica p, 
+        .cardEurope p, 
+        .cardAsia p, 
+        .cardAustralia p,
+        .cardLatinAmerica p,
+        .cardAmerica p{
+            width: fit-content;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+            text-shadow: 5px 10px 15px black;
+            text-align: center;
+        }
+        .cards .cardAfrica button, 
+        .cardEurope button, 
+        .cardAsia button, 
+        .cardAustralia button,
+        .cardLatinAmerica button,
+        .cardAmerica button{
+            border-radius: 50px;
+            color: white;
+            margin-left: 1%;
+            border: 1px white solid;
+            font-size: 20px;
+            padding: 2%;
+            background: transparent;
+            transition: 400ms;
+            cursor: pointer;
+        }
+        .cards .cardAfrica button:hover, 
+        .cardEurope button:hover, 
+        .cardAsia button:hover, 
+        .cardAustralia button:hover,
+        .cardLatinAmerica button:hover,
+        .cardAmerica button:hover {
+            background: white;
+            color: black;
+        }
+        .cards .cardAfrica .buyAdd, 
+        .cardEurope .buyAdd, 
+        .cardAsia .buyAdd, 
+        .cardAustralia .buyAdd,
+        .cardLatinAmerica .buyAdd,
+        .cardAmerica .buyAdd{
+            display: flex;
+            flex-direction: row;
+            margin-right: 2rem;
+            flex:auto;
+            justify-content: space-evenly;
+        }
+        .cards .cardAfrica .buyAdd .detailBtn, 
+        .cardEurope .buyAdd .detailBtn, 
+        .cardAsia .buyAdd .detailBtn, 
+        .cardAustralia .buyAdd .detailBtn,
+        .cardLatinAmerica .buyAdd .detailBtn,
+        .cardAmerica .buyAdd .detailBtn{
+            margin-right: 0.2rem;
+        }
+        .price{
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 4rem;
+            color: white;
+        }
+    </style>
+    <title>Product</title>
+</head>
+<body>
+    <div class="container">
+        <h1>GREENT</h1>
+        <p>Admin: Product</p>
+        <hr style='color: black; border: 2px solid black;'>
+        <div class="cards">
+            <div class="cards" id='allCards'>
+                <!-- Africa -->
+                    <div class="cardAfrica" id='Africa'>
+                        <h2 style='text-align: center; font-weight: 700; font-size: 38px;'>Africa</h2>
+                        <img src="https://images.pexels.com/photos/5487407/pexels-photo-5487407.jpeg?cs=srgb&dl=pexels-jurie-maree-5487407.jpg&fm=jpg" alt="Africa">
+                        <hr style="color: black; width: 80%;">
+                        <p>The greatest wildlife spectacle on earth<br><br>
+                            Africa is the world’s premier wildlife watching destination.<br><br> From coming face to face with a troop of gorillas in the jungle and feeling a million wildebeest hooves thunder across the Serengeti on their migration,<br><br> to following big cats on the prowl through the bush and breathtaking encounters elephants on foot, there is nowhere like it.
+                        </p>
+                        <hr style="color: black; width: 80%;">
+                        <!-- <button class='detailBtn'>More detail</button> -->
+                        <div class="buyAdd">
+                            <button class='detailBtn'>Edit</button>
+                            <hr style="color: black;">
+                            <button>Delete</button>
+                        </div>
+                        <hr style="color: black; width: 80%;">
+                        <div class="price">
+                            <h1>From: <span id='priceAfrica'>£4,196</span></h1>
+                        </div>
+                    </div>
+
+                    <!-- Europe -->
+                    <div class="cardEurope" id='Europe'>
+                        <h2 style='text-align: center; font-weight: 700; font-size: 38px; color: white;'>Europe</h2>
+                        <img src="https://images.pexels.com/photos/3879160/pexels-photo-3879160.jpeg?cs=srgb&dl=pexels-alex-azabache-3879160.jpg&fm=jpg" alt="Europe">
+                        <hr style="color: black; width: 80%;">
+                        <p>Luxury nature travel and safaris<br><br>
+                            Europe may not be the first continent that springs to mind when looking for a luxury nature-based holiday,<br><br> yet there are areas of true wilderness to be found close to its historic cities, and regions where nature is being encouraged to flourish once more.
+                        </p>
+                        <hr style="color: black; width: 80%;">
+                        <!-- <button class='detailBtn'>More detail</button> -->
+                        <div class="buyAdd">
+                            <button class='detailBtn'>Edit</button>
+                            <hr style="color: black;">
+                            <button>Delete</button>
+                        </div>
+                        <hr style="color: black; width: 80%;">
+                        <div class="price">
+                            <h1>From: <span id='priceEurope'>£3,916</span></h1>
+                        </div>
+                    </div>
+
+                    <!-- Asia -->
+                    <div class="cardAsia" id='Asia'>
+                        <h2 style='text-align: center; font-weight: 700; font-size: 38px; color: black;'>Asia</h2>
+                        <img src="https://images.pexels.com/photos/5205307/pexels-photo-5205307.jpeg?cs=srgb&dl=pexels-ryutaro-tsukata-5205307.jpg&fm=jpg" alt="Africa">
+                        <hr style="color: black; width: 80%;">
+                        <p>Ancient cultures and vital wilderness<br><br>
+                            Whether you're hiking on the Roof of World in the Himalayas, tracking tigers in the jungle,<br><br> island hopping by sailing yacht or diving with whale sharks, Asia’s wild places are as epic as they are varied.
+                        </p>
+                        <hr style="color: black; width: 80%;">
+                        <!-- <button class='detailBtn'>More detail</button> -->
+                        <div class="buyAdd">
+                            <button class='detailBtn'>Edit</button>
+                            <hr style="color: black;">
+                            <button>Delete</button>
+                        </div>
+                        <hr style="color: black; width: 80%;">
+                        <div class="price">
+                            <h1>From: <span id='priceAsia'>£3,182</span></h1>
+                        </div>
+                    </div>
+
+                    <!-- Australia -->
+                    <div class="cardAustralia" id='Australia'>
+                        <h2 style='text-align: center; font-weight: 700; font-size: 38px; color: white;'>Australia</h2>
+                        <img src="https://images.pexels.com/photos/2122408/pexels-photo-2122408.jpeg?cs=srgb&dl=pexels-ethan-brooke-2122408.jpg&fm=jpg" alt="Austraia">
+                        <hr style="color: black; width: 80%;">
+                        <p>Unique wildlife and unlimited adventure<br><br>
+                            New Zealand, Australia and a sprinkling of Polynesian islands in the Pacific between them are incredible settings for an adventure.<br><br>
+                            Outback deserts, rainbow coral playgrounds, alpine mountains, and green forests home to some of the world’s most unusual wildlife –there are countless stretches of beautiful wilderness to explore.
+                        </p>
+                        <hr style="color: black; width: 80%;">
+                        <!-- <button class='detailBtn'>More detail</button> -->
+                        <div class="buyAdd">
+                            <button class='detailBtn'>Edit</button>
+                            <hr style="color: black;">
+                            <button>Delete</button>
+                        </div>
+                        <hr style="color: black; width: 80%;">
+                        <div class="price">
+                            <h1>From: <span id='priceAustralia'>£10,472</span></h1>
+                        </div>
+                    </div>
+
+                    <!-- Latin America -->
+                    <div class="cardLatinAmerica" id='Latin'>
+                        <h2 style='text-align: center; font-weight: 700; font-size: 38px; color: white;'>Latin America</h2>
+                        <img src="https://images.pexels.com/photos/8639332/pexels-photo-8639332.jpeg?cs=srgb&dl=pexels-rodnae-productions-8639332.jpg&fm=jpg" alt="Latin America">
+                        <hr style="color: black; width: 80%;">
+                        <p>Diverse landscapes, cultures and wildlife<br><br>
+                            From great rainforests and wetlands bursting with life to snowcapped Patagonian mountains and red deserts, all skirted by the rich waters of the Atlantic and Pacific Oceans, Latin America is a stunningly diverse continent.<br><br>
+                            Its cultures too are colourful and varied with a beautiful blend of indigenous, European and African influences to experience. Climb ancient wonders and wander colonial-era plazas before indulging in buzzing creative and culinary scenes.
+                        </p>
+                        <hr style="color: black; width: 80%;">
+                        <!-- <button class='detailBtn'>More detail</button> -->
+                        <div class="buyAdd">
+                            <button class='detailBtn'>Edit</button>
+                            <hr style="color: black;">
+                            <button>Delete</button>
+                        </div>
+                        <hr style="color: black; width: 80%;">
+                        <div class="price">
+                            <h1>From: <span id='priceLatinAmerica'>£3,515</span></h1>
+                        </div>
+                    </div>
+
+                    <!-- America -->
+                    <div class="cardAmerica" id='America'>
+                        <h2 style='text-align: center; font-weight: 700; font-size: 38px; color: white;'>America</h2>
+                        <img src="https://images.pexels.com/photos/2360574/pexels-photo-2360574.jpeg?cs=srgb&dl=pexels-nicolas-poupart-2360574.jpg&fm=jpg" alt="America">
+                        <hr style="color: black; width: 80%;">
+                        <p>Diverse landscapes, cultures and wildlife<br><br>
+                            From great rainforests and wetlands bursting with life to snowcapped Patagonian mountains and red deserts, all skirted by the rich waters of the Atlantic and Pacific Oceans, Latin America is a stunningly diverse continent.<br><br>
+                            Its cultures too are colourful and varied with a beautiful blend of indigenous, European and African influences to experience. Climb ancient wonders and wander colonial-era plazas before indulging in buzzing creative and culinary scenes.
+                        </p>
+                        <hr style="color: black; width: 80%;">
+                        <!-- <button class='detailBtn'>More detail</button> -->
+                        <div class="buyAdd">
+                            <button class='detailBtn'>Edit</button>
+                            <hr style="color: black;">
+                            <button>Delete</button>
+                        </div>
+                        <hr style="color: black; width: 80%;">
+                        <div class="price">
+                            <h1>From: <span id='priceAmerica'>£6,787</span></h1>
+                        </div>
+                    </div>
+                    <div class="Add">
+                        <h3>Add more here</h3>
+                        <a href="./adminProductAdd.html"><button class='addBtn'>Add</button></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
